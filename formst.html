@@ -51,9 +51,12 @@
   
      <span class="fr2">Введіть назву стартапу </span> <input type="text" class="in">
      <div class="load"> 
-        <span class="fr2" >Завантажте фото чи відео </span> <p id="button"></p> <input type="file" id="inp_file" />   <input type="file" id="inp_file" /> <input type="file" id="inp_file" />
-         </div>   
-     <span class="fr2">CEO вашого стартапу</span> <input type="text" class="in">
+        <span class="fr2" >Завантажте фото чи відео </span> <label for="uploadbtn" class="uploadButton">Завантажити файл<div></div></label>
+        <input style="opacity: 0; z-index: -1;" multiple type="file" name="upload" id="uploadbtn" onchange='document.querySelector(".uploadButton div").innerHTML = Array.from(this.files).map(f => f.name).join("<br />")' /><label for="uploadbtn" class="uploadButton">Завантажити файл<div></div></label>
+        <input style="opacity: 0; z-index: -1;" multiple type="file" name="upload" id="uploadbtn" onchange='document.querySelector(".uploadButton div").innerHTML = Array.from(this.files).map(f => f.name).join("<br />")' /> <label for="uploadbtn" class="uploadButton">Завантажити файл<div></div></label>
+        <input style="opacity: 0; z-index: -1;" multiple type="file" name="upload" id="uploadbtn" onchange='document.querySelector(".uploadButton div").innerHTML = Array.from(this.files).map(f => f.name).join("<br />")' />
+     </div>
+        <span class="fr2">CEO вашого стартапу</span> <input type="text" class="in">
      <span class="fr2">Введіть загальну інформацію про ваш стартап</span><textarea class="in2"></textarea>
      <span class="fr2">Введіть ваш номер телефону</span> <input type="text" class="in3">
      <span class="fr2">Введіть свій email</span> <input type="email" class="in4">
